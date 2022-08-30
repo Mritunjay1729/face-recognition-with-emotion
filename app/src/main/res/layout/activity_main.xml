@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <com.example.facedetectionusingcamera.ui_components.CameraPreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.facedetectionusingcamera.ui_components.GraphicsOverlay
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.example.facedetectionusingcamera.ui_components.CameraPreview>
+
+    <Button
+        android:id="@+id/takePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="100sp"
+        android:layout_marginBottom="30sp"
+        android:background="@drawable/button_selector"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Take Photo"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/leftEye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/takePhoto"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="-27sp"
+        android:text="Please open your left eye.."
+        android:textColor="@color/grey_light"
+        android:visibility="gone" />
+    z
+
+    <TextView
+        android:id="@+id/rightEye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/leftEye"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="-20sp"
+        android:text="Please open your right eye.."
+        android:textColor="@color/grey_light"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/test"
+        android:layout_width="75sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20sp"
+        android:adjustViewBounds="true"
+        android:minHeight="100sp" />
+
+    <com.hsalf.smilerating.SmileRating
+        android:id="@+id/smile_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120sp" />
+
+</RelativeLayout>
